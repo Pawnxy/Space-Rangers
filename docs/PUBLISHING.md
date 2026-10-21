@@ -10,7 +10,7 @@ WEITRAUM besteht ausschließlich aus statischen HTML-, CSS-, SVG- und JavaScript
 
 Der Workflow führt die Regeltests aus, baut `dist/` und veröffentlicht den geprüften Build. Solange das Repository privat ist, werden die Runner übersprungen. Bei späteren Änderungen an `main` wird die Veröffentlichung automatisch aktualisiert.
 
-Nach einer erfolgreichen Bereitstellung zeigt GitHub Pages die gültige Spieladresse an. Ohne eigene Domain ist sie voraussichtlich `https://pawnxy.github.io/Space-Rangers/`. Erst der erfolgreiche Deployment-Status und ein Aufruf der Website bestätigen, dass sie erreichbar ist.
+Die veröffentlichte Spieladresse lautet **[https://pawnxy.github.io/Space-Rangers/](https://pawnxy.github.io/Space-Rangers/)**. Die Bereitstellung über GitHub Actions ist abgeschlossen. Die öffentliche HTTPS-Seite wurde in Chromium bei 390 × 844 Pixeln geprüft: neue Reise, Landung, Markteinkauf und Wiederherstellung des Spielstands funktionieren ohne Browserfehler oder fehlgeschlagene Asset-Anfragen.
 
 ## Auf dem Handy
 

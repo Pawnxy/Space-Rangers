@@ -2,6 +2,8 @@
 
 Ein spielbares Weltraum-RPG nach den Anforderungen aus dem Projektchat **„Spielentwurf nach Space Rangers“**. Die Spielwelt bewegt sich in Runden; Flüge, Planetenbahnen und Sprünge werden weich animiert. Die Oberfläche ist auf Deutsch und unterstützt Desktop und Smartphone.
 
+**[Jetzt kostenlos im Browser spielen](https://pawnxy.github.io/Space-Rangers/)** — auch auf Android und iPhone. Ein Konto ist zum Spielen nicht erforderlich. Über das Browsermenü lässt sich die Seite zum Startbildschirm hinzufügen.
+
 ## Starten
 
 Node.js ab Version 22 genügt. In der vorbereiteten Cloud-Umgebung liegt das Projekt unter `/workspace/Space-Rangers`.
