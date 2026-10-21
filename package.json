@@ -1,0 +1,20 @@
+{
+  "name": "weitraum",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "WEITRAUM – Freie Horizonte. Ein rundenbasiertes Weltraum-RPG.",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "start": "node scripts/serve.mjs --dist",
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "playwright test"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1"
+  }
+}

@@ -1,0 +1,54 @@
+name: Publish WEITRAUM
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# GitHub Pages and Linux Actions are free for public repositories.
+# Skip runners while private so publishing does not consume private CI minutes.
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - name: Install development dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Test game rules
+        run: npm test
+      - name: Build static game
+        run: npm run build
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Publish game
+        id: deployment
+        uses: actions/deploy-pages@v4
